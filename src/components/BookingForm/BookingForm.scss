@@ -1,0 +1,21 @@
+.select-table-input {
+	.selected-table-icon {
+		display: none;
+	}
+
+	&:checked ~ .selected-table-icon {
+		display: block !important;
+	}
+}
+
+.food-package {
+	cursor: pointer;
+	.selected-icon {
+		display: none;
+	}
+	.food-package-input {
+		&:checked ~ .selected-icon {
+			display: block !important;
+		}
+	}
+}

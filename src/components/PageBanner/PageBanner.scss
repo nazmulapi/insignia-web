@@ -1,0 +1,82 @@
+.PageBanner {
+	.PageBanner-row {
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding-left: calc(var(--sidebar-width) + var(--theme-gutter-x) * 5);
+		padding-right: calc(var(--sidebar-width) + var(--theme-gutter-x) * 5);
+		font-family: 'Alfa Slab One', cursive;
+		position: relative;
+		z-index: 5;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+		@media (max-width: 992px) {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, rgba(2, 0, 36, 0.75) 0%, rgba(9, 9, 121, 0.15) 100%);
+			z-index: -5;
+		}
+
+		.line {
+			width: 1px;
+			height: 150px;
+			background-color: var(--bs-white);
+			margin: auto;
+		}
+	}
+}
+
+.PagerBannerForRestaurantReservation {
+	.PageBanner-row {
+		height: 500px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding-left: calc(var(--sidebar-width) + var(--theme-gutter-x) * 5);
+		padding-right: calc(var(--sidebar-width) + var(--theme-gutter-x) * 5);
+		position: relative;
+		z-index: 5;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+		@media (max-width: 992px) {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to top, rgba(2, 0, 36, 0.6), rgba(9, 9, 121, 0.3));
+			z-index: -5;
+		}
+
+		.line {
+			width: 1px;
+			height: 50px;
+			background-color: var(--bs-white);
+			margin: auto;
+		}
+	}
+}

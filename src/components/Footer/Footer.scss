@@ -1,0 +1,51 @@
+.footer {
+	padding-top: 80px;
+
+	.footer-widget {
+		--gray-white: var(--bs-gray-400);
+		.footer-title {
+			display: inline-block;
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		.important-widgets {
+			> a {
+				color: var(--gray-white);
+			}
+			color: var(--gray-white);
+
+			
+			.important-widgets-img {
+				--size: 60px;
+				width: var(--size);
+				height: var(--size);
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+
+		.footer-logo {
+			font-family: 'Alfa Slab One', cursive;
+		}
+
+		.footer-desc {
+			font-size: 14px;
+			color: var(--gray-white);
+		}
+
+		.footer-widget-links {
+			a {
+				font-size: 14px;
+				color: var(--gray-white);
+				text-decoration: none;
+				transition: all 0.3s linear;
+				display: inline-block;
+
+				&:hover {
+					color: var(--bs-gray-400);
+				}
+			}
+		}
+	}
+}
