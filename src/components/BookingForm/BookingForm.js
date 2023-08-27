@@ -17,7 +17,8 @@ const _ = require('lodash');
 const BookingForm = ({ returnBack }) => {
 	const schema = Yup.object({
 		menu_type_id: Yup.string().required(),
-		full_name: Yup.string().required().min(2).max(20),
+		first_name: Yup.string().required().min(2).max(20),
+		last_name: Yup.string().required().min(2).max(20),
 		contact_number: Yup.string()
 			.required()
 			.matches(/^[0-9]+$/, 'Enter number only')
@@ -344,11 +345,20 @@ const BookingForm = ({ returnBack }) => {
 									</legend>
 									<div className="row form-group mb-2">
 										<label htmlFor="#" className="col-sm-3 fs-6 text-sm-end col-form-label">
-											Full Name
+											First Name
 										</label>
 										<div className="col">
-											<input type="text" {...register('full_name')} name="full_name" className="form-control" placeholder="Full Name" />
-											<p className="mb-0 text-danger">{errors.full_name?.message}</p>
+											<input type="text" {...register('first_name')} name="first_name" className="form-control" placeholder="First Name" />
+											<p className="mb-0 text-danger">{errors.first_name?.message}</p>
+										</div>
+									</div>
+									<div className="row form-group mb-2">
+										<label htmlFor="#" className="col-sm-3 fs-6 text-sm-end col-form-label">
+											Last Name
+										</label>
+										<div className="col">
+											<input type="text" {...register('last_name')} name="last_name" className="form-control" placeholder="Last Name" />
+											<p className="mb-0 text-danger">{errors.last_name?.message}</p>
 										</div>
 									</div>
 									<div className="row form-group mb-2">
